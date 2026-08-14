@@ -1,0 +1,6 @@
+{
+  "name": "BVCITS Smart Campus",
+  "description": "Integrated Smart Campus Platform connecting Students, Parents, Faculty, Management, Recruiters, and Trainers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,127 @@
+import React from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import {
+  LayoutDashboard,
+  User,
+  CalendarCheck,
+  GraduationCap,
+  CalendarDays,
+  Briefcase,
+  Award,
+  BellRing,
+  Calendar,
+  Bell,
+  X,
+  Users,
+  ShieldCheck,
+} from 'lucide-react';
+
+interface ParentSidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export const ParentSidebar: React.FC<ParentSidebarProps> = ({ isOpen, onClose }) => {
+  const location = useLocation();
+
+  const navItems = [
+    { label: 'Dashboard', path: '/parent/dashboard', icon: LayoutDashboard },
+    { label: 'Parent & Student Profile', path: '/parent/profile', icon: User },
+    { label: 'Attendance Monitoring', path: '/parent/attendance', icon: CalendarCheck },
+    { label: 'Academic Marks', path: '/parent/marks', icon: GraduationCap },
+    { label: 'Class Timetable', path: '/parent/timetable', icon: CalendarDays },
+    { label: 'Placements & Career', path: '/parent/placements', icon: Briefcase },
+    { label: 'Training Progress', path: '/parent/training', icon: Award },
+    { label: 'Campus Notices', path: '/parent/notices', icon: BellRing },
+    { label: 'College Events', path: '/parent/events', icon: Calendar },
+    { label: 'Notifications', path: '/parent/notifications', icon: Bell },
+  ];
+
+  return (
+    <>
+      {/* Mobile Backdrop */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-40 lg:hidden"
+          onClick={onClose}
+        />
+      )}
+
+      {/* Sidebar Container */}
+      <aside
+        className={`fixed top-0 left-0 bottom-0 w-64 bg-slate-900 border-r border-slate-800 z-50 flex flex-col transition-transform duration-300 ease-in-out lg:translate-x-0 ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        {/* Brand / Logo Header */}
+        <div className="h-16 px-5 border-b border-slate-800/80 flex items-center justify-between shrink-0">
+          <NavLink to="/parent/dashboard" className="flex items-center space-x-3">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-600 p-0.5 shadow-md shadow-emerald-500/20">
+              <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
+                <Users className="w-5 h-5 text-emerald-400" />
+              </div>
+            </div>
+            <div>
+              <span className="font-extrabold text-sm text-white tracking-wide block leading-none">BVCITS</span>
+              <span className="text-[10px] text-emerald-400 font-semibold tracking-wider uppercase block mt-0.5">Parent Portal</span>
+            </div>
+          </NavLink>
+
+          {/* Close button for mobile */}
+          <button
+            onClick={onClose}
+            className="lg:hidden p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800"
+            aria-label="Close sidebar"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        {/* Navigation Menu */}
+        <div className="flex-1 overflow-y-auto py-4 px-3 space-y-1 custom-scrollbar">
+          <div className="px-3 pb-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest flex items-center justify-between">
+            <span>Ward Academic Portal</span>
+            <span className="text-[9px] font-semibold text-emerald-400 bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-800/40">Read-Only</span>
+          </div>
+
+          {navItems.map((item) => {
+            const Icon = item.icon;
+            const isActive = location.pathname === item.path;
+
+            return (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                onClick={onClose}
+                className={`flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all ${
+                  isActive
+                    ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-md shadow-emerald-500/20'
+                    : 'text-slate-400 hover:text-white hover:bg-slate-800/60'
+                }`}
+              >
+                <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-white' : 'text-slate-400'}`} />
+                <span className="truncate">{item.label}</span>
+              </NavLink>
+            );
+          })}
+        </div>
+
+        {/* Sidebar Footer Badge */}
+        <div className="p-4 border-t border-slate-800/80 shrink-0">
+          <div className="p-3 rounded-2xl bg-slate-950/60 border border-slate-800 flex items-center space-x-3">
+            <div className="w-8 h-8 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="text-[11px] font-bold text-slate-200 truncate">Verified Guardian</div>
+              <div className="text-[10px] text-emerald-400 flex items-center gap-1 mt-0.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span>Linked Student Sync</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </>
+  );
+};
