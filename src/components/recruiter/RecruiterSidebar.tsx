@@ -59,9 +59,13 @@ export const RecruiterSidebar: React.FC<RecruiterSidebarProps> = ({ isOpen, onCl
         {/* Header Branding */}
         <div className="h-16 px-6 flex items-center justify-between border-b border-slate-800/80">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-600 via-teal-600 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-cyan-500/20">
-              <Building2 className="w-6 h-6" />
-            </div>
+           <div className="w-10 h-10 rounded-xl bg-white border border-slate-700 overflow-hidden flex items-center justify-center shadow-lg shadow-cyan-500/20">
+  <img
+    src="/bvcits-logo.jpeg"
+    alt="BVCITS Logo"
+    className="w-full h-full object-contain p-0.5"
+  />
+</div>
             <div>
               <h1 className="font-bold text-base text-white tracking-tight">BVCITS</h1>
               <p className="text-xs text-cyan-400 font-medium">Recruiter Portal</p>

@@ -56,11 +56,13 @@ export const ParentSidebar: React.FC<ParentSidebarProps> = ({ isOpen, onClose })
         {/* Brand / Logo Header */}
         <div className="h-16 px-5 border-b border-slate-800/80 flex items-center justify-between shrink-0">
           <NavLink to="/parent/dashboard" className="flex items-center space-x-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-600 p-0.5 shadow-md shadow-emerald-500/20">
-              <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-                <Users className="w-5 h-5 text-emerald-400" />
-              </div>
-            </div>
+            <div className="w-9 h-9 rounded-xl bg-white border border-slate-700 overflow-hidden flex items-center justify-center shadow-md shadow-emerald-500/20">
+  <img
+    src="/bvcits-logo.jpeg"
+    alt="BVCITS Logo"
+    className="w-full h-full object-contain p-0.5"
+  />
+</div>
             <div>
               <span className="font-extrabold text-sm text-white tracking-wide block leading-none">BVCITS</span>
               <span className="text-[10px] text-emerald-400 font-semibold tracking-wider uppercase block mt-0.5">Parent Portal</span>

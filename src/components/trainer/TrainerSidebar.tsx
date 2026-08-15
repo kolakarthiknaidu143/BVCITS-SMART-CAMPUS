@@ -54,11 +54,13 @@ export const TrainerSidebar: React.FC<TrainerSidebarProps> = ({ isOpen, onClose 
           {/* Logo & Close Button */}
           <div className="h-16 px-6 border-b border-slate-800 flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-500 p-0.5 shadow-md shadow-amber-500/20">
-                <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-                  <Award className="w-5 h-5 text-amber-400" />
-                </div>
-              </div>
+              <div className="w-9 h-9 rounded-xl bg-white border border-slate-700 overflow-hidden flex items-center justify-center shadow-md shadow-amber-500/20">
+  <img
+    src="/bvcits-logo.jpeg"
+    alt="BVCITS Logo"
+    className="w-full h-full object-contain p-0.5"
+  />
+</div>
               <div>
                 <h1 className="text-sm font-extrabold text-white tracking-tight leading-none">BVCITS Smart Campus</h1>
                 <span className="text-[10px] font-bold text-amber-400 uppercase tracking-widest">Trainer Portal</span>
