@@ -56,13 +56,15 @@ export const RegisterPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8 font-sans">
       <div className="sm:mx-auto sm:w-full sm:max-w-md text-center">
-        <Link to="/" className="inline-flex items-center space-x-3 mb-4">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 p-0.5 shadow-lg shadow-indigo-500/20">
-            <div className="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center">
-              <GraduationCap className="w-7 h-7 text-indigo-400" />
-            </div>
-          </div>
-        </Link>
+        <Link to="/" className="inline-flex items-center justify-center mb-4">
+  <div className="w-16 h-16 rounded-2xl overflow-hidden bg-white shadow-lg shadow-indigo-500/20 ring-1 ring-slate-700">
+    <img
+      src="/bvcits-logo.jpeg"
+      alt="BVCITS Logo"
+      className="w-full h-full object-fill"
+    />
+  </div>
+</Link>
         <h2 className="text-2xl font-extrabold text-white tracking-tight">
           BVCITS Institutional Registration
         </h2>
