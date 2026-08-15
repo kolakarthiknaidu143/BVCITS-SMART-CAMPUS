@@ -211,11 +211,7 @@ export const StudentDashboardPage: React.FC = () => {
           <div className="flex items-center justify-between mb-3">
             <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Cumulative GPA</span>
             <div className="p-2.5 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-              <img
-    src="/bvcits-logo.jpeg"
-    alt="BVCITS Logo"
-    className="w-full h-full object-fill"
-  />
+              <GraduationCap className="w-5 h-5" />
             </div>
           </div>
           <div className="text-3xl font-black text-white">{profile.cgpa.toFixed(2)}</div>
