@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { NotificationMenu } from './NotificationMenu';
-import { GraduationCap, LogOut, Menu, X, ChevronRight, User as UserIcon } from 'lucide-react';
+import { LogOut, Menu, X, ChevronRight, User as UserIcon } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const { user, logout } = useAuth();
@@ -61,11 +61,14 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group" id="bvcits-logo-link">
-            <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-blue-700 via-indigo-600 to-purple-600 p-0.5 shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
-              <div className="w-full h-full bg-white dark:bg-slate-900 rounded-[10px] flex items-center justify-center">
-                <GraduationCap className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
-              </div>
+            <div className="w-11 h-11 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex items-center justify-center shadow-md shadow-indigo-500/10 group-hover:scale-105 transition-transform overflow-hidden">
+              <img
+  src="/bvcits-logo.jpeg"
+  alt="BVCITS Logo"
+  className="h-full w-full object-fill"
+/>
             </div>
+
             <div>
               <div className="font-extrabold text-lg sm:text-xl tracking-tight text-slate-900 dark:text-white flex items-center gap-1.5">
                 BVCITS
@@ -152,6 +155,7 @@ export const Navbar: React.FC = () => {
               {link.name}
             </button>
           ))}
+
           <div className="pt-2 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2">
             {user ? (
               <>
@@ -164,6 +168,7 @@ export const Navbar: React.FC = () => {
                 >
                   Go to Dashboard ({user.role.toUpperCase()})
                 </button>
+
                 <button
                   onClick={() => {
                     setMobileMenuOpen(false);

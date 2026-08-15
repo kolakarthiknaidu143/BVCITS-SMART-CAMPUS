@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Mail, Phone, MapPin, Globe, ArrowUpRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
@@ -7,23 +7,33 @@ export const Footer: React.FC = () => {
     <footer className="bg-slate-900 text-slate-300 border-t border-slate-800 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+          
           {/* Col 1: Brand */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 p-0.5">
-                <div className="w-full h-full bg-slate-900 rounded-[10px] flex items-center justify-center">
-                  <GraduationCap className="w-5 h-5 text-indigo-400" />
-                </div>
+              
+              {/* College Logo */}
+              <div className="w-10 h-10 flex items-center justify-center">
+                <img
+                  src="/bvcits-logo.jpeg"
+                  alt="BVCITS Logo"
+                  className="w-full h-full object-fill rounded-lg"
+                />
               </div>
+
               <span className="font-extrabold text-xl text-white tracking-tight">
                 BVCITS <span className="text-indigo-400 font-bold text-xs uppercase ml-1">Smart Campus</span>
               </span>
             </div>
+
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
               BVC Institute of Technology and Science (BVCITS) is a premier autonomous engineering institute committed to academic excellence, innovative research, and 100% placement outcomes.
             </p>
+
             <div className="flex items-center space-x-4 pt-2">
-              <span className="text-xs text-slate-400 font-medium">Approved by AICTE | Affiliated to JNTUK</span>
+              <span className="text-xs text-slate-400 font-medium">
+                Approved by AICTE | Affiliated to JNTUK
+              </span>
             </div>
           </div>
 
@@ -60,17 +70,25 @@ export const Footer: React.FC = () => {
                 <MapPin className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
                 <span>Amalapuram, East Godavari, Andhra Pradesh, India</span>
               </li>
+
               <li className="flex items-center space-x-2.5">
                 <Phone className="w-4 h-4 text-indigo-400 shrink-0" />
                 <span>+91 8856 223344 / 223355</span>
               </li>
+
               <li className="flex items-center space-x-2.5">
                 <Mail className="w-4 h-4 text-indigo-400 shrink-0" />
                 <span>principal@bvcits.edu.in</span>
               </li>
+
               <li className="flex items-center space-x-2.5">
                 <Globe className="w-4 h-4 text-indigo-400 shrink-0" />
-                <a href="https://bvcits.edu.in" target="_blank" rel="noreferrer" className="hover:text-white flex items-center gap-1">
+                <a
+                  href="https://bvcits.edu.in"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-white flex items-center gap-1"
+                >
                   www.bvcits.edu.in <ArrowUpRight className="w-3 h-3" />
                 </a>
               </li>
@@ -81,6 +99,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-4">
           <p>© {new Date().getFullYear()} BVCITS Smart Campus. All rights reserved.</p>
+
           <div className="flex space-x-6">
             <span className="hover:text-slate-400 cursor-pointer">Privacy Policy</span>
             <span className="hover:text-slate-400 cursor-pointer">Terms of Service</span>
