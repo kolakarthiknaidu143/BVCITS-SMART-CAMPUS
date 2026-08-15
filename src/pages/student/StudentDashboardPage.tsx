@@ -211,7 +211,11 @@ export const StudentDashboardPage: React.FC = () => {
           <div className="flex items-center justify-between mb-3">
             <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Cumulative GPA</span>
             <div className="p-2.5 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-              <GraduationCap className="w-5 h-5" />
+              <img
+    src="/bvcits-logo.jpeg"
+    alt="BVCITS Logo"
+    className="w-full h-full object-fill"
+  />
             </div>
           </div>
           <div className="text-3xl font-black text-white">{profile.cgpa.toFixed(2)}</div>
@@ -301,7 +305,11 @@ export const StudentDashboardPage: React.FC = () => {
           <div className="p-6 rounded-3xl bg-slate-900/80 border border-slate-800 shadow-xl">
             <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-800">
               <div className="flex items-center space-x-2">
-                <GraduationCap className="w-5 h-5 text-indigo-400" />
+                <img
+    src="/bvcits-logo.jpeg"
+    alt="BVCITS Logo"
+    className="w-full h-full object-fill"
+  />
                 <h2 className="text-base font-bold text-white">Academic Performance & Internal Marks</h2>
               </div>
               <Link to="/student/marks" className="text-xs font-semibold text-indigo-400 hover:underline">

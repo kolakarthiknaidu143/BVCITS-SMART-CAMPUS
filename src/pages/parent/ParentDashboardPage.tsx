@@ -185,12 +185,16 @@ export const ParentDashboardPage: React.FC = () => {
             <span>Attendance Log</span>
           </Link>
           <Link
-            to="/parent/marks"
-            className="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-500/20 transition-all flex items-center gap-1.5"
-          >
-            <GraduationCap className="w-4 h-4" />
-            <span>View Marks</span>
-          </Link>
+  to="/parent/marks"
+  className="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-500/20 transition-all flex items-center gap-1.5"
+>
+  <img
+    src="/bvcits-logo.jpeg"
+    alt="BVCITS Logo"
+    className="w-full h-full object-fill"
+  />
+  <span>View Marks</span>
+</Link>
         </div>
       </div>
 
