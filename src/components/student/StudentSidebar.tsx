@@ -56,11 +56,13 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = ({ isOpen, onClose 
         {/* Brand / Logo Header */}
         <div className="h-16 px-5 border-b border-slate-800/80 flex items-center justify-between shrink-0">
           <NavLink to="/student/dashboard" className="flex items-center space-x-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 p-0.5 shadow-md shadow-indigo-500/20">
-              <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-                <GraduationCap className="w-5 h-5 text-indigo-400" />
-              </div>
-            </div>
+            <div className="w-9 h-9 rounded-xl bg-white border border-slate-700 shadow-md shadow-indigo-500/20 overflow-hidden flex items-center justify-center">
+  <img
+    src="/bvcits-logo.jpeg"
+    alt="BVCITS Logo"
+    className="w-full h-full object-fill p-0.5"
+  />
+</div>
             <div>
               <span className="font-extrabold text-sm text-white tracking-wide block leading-none">BVCITS</span>
               <span className="text-[10px] text-indigo-400 font-semibold tracking-wider uppercase block mt-0.5">Smart Campus</span>
