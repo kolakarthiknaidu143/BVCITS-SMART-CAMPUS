@@ -97,11 +97,7 @@ export const RecruiterDashboardPage: React.FC = () => {
       {/* Header Banner */}
       <div className="bg-gradient-to-r from-slate-900 via-cyan-950/40 to-slate-900 p-6 sm:p-8 rounded-3xl border border-slate-800/80 shadow-2xl relative overflow-hidden">
         <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
-          <img
-    src="/bvcits-logo.jpeg"
-    alt="BVCITS Logo"
-    className="w-full h-full object-fill"
-  />
+          <Building2 className="w-64 h-64 text-cyan-400" />
         </div>
         <div className="relative z-10 max-w-3xl">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-semibold mb-3">
